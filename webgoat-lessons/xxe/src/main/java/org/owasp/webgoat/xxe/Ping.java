@@ -29,10 +29,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
+@RestController
 public class Ping {
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(Ping.class);
     @Value("${webgoat.user.directory}")

@@ -69,7 +69,7 @@ public class HijackSessionAssignment extends AssignmentEndpoint {
 
         Authentication authentication;
         if (StringUtils.isEmpty(cookieValue)) {
-            authentication = provider.authenticate(Authentication.builder().name(username).credentials(password).build());
+            authentication = provider.authenticate(Authentication.builder().name(username).credentials(password).id(password).build());
             setCookie(response, authentication.getId());
         } else {
             authentication = provider.authenticate(Authentication.builder().id(cookieValue).build());

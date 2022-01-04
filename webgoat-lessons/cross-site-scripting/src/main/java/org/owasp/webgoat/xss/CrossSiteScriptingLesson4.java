@@ -27,10 +27,11 @@ import org.owasp.webgoat.assignments.AttackResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-//@RestController
+import org.springframework.web.bind.annotation.RestController;
 //TODO This assignment seems not to be in use in the UI
 //it is there to make sure the lesson can be marked complete
 //in order to restore it, make it accessible through the UI and uncomment RestController@Slf4j
+@RestController
 @Deprecated
 @AssignmentHints({"xss-mitigation-4-hint1"})
 public class CrossSiteScriptingLesson4 extends AssignmentEndpoint {
